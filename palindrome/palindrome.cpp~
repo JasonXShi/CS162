@@ -1,0 +1,29 @@
+/*
+ *Jason Shi
+ *
+ *
+ */
+#include <cstring>
+#include <iostream>
+using namespace std;
+int main(){
+  //take input
+  char input[80];
+  char forward[80];
+  char backward[80];
+  cin.get(input, 80);
+  cin.get();
+  //remove punctuation and spaces
+  int count = 0;
+  for(int i = 0; i<strlen(input); i++){
+    if(isalpha(input[i]) || isdigit(input[i])){
+      if(input[i] != '\0')
+      forward[count] = input[i];
+	count++;
+    }
+  }
+  //flip backwards
+  //compare strings
+  //end program
+  return 0;
+}
