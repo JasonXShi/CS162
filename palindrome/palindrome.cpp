@@ -1,7 +1,7 @@
 /*
  *Jason Shi
- *
- *
+ *Palindrome
+ *This program checks if a string is a palindrome
  */
 #include <cstring>
 #include <iostream>
