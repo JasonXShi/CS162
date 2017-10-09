@@ -79,13 +79,17 @@ int main(){
 bool checkWin(int board[3][3], int player){
   //checks rows for win
   for(int row = 0; row<3; row++){
-    if(board[row][0] == player && board[row][1]==player &&board[row][2] == player)
+    if(board[row][0] == player && board[row][1]==player &&board[row][2] == player){
+      cout << "column";
       return true;
+    }
   }
   //checks columns for win
   for(int column=0;column<3;column++){
-    if(board[0][column] == player && board[1][column] == player && board[2][column] == player)
+    if(board[0][column] == player && board[1][column] == player && board[2][column] == player){
+      cout << "column";
       return true;
+    }
   }
   //checks diagonals for win
   if(board[0][0] == player && board [1][1] == player && board[2][2] == player)
