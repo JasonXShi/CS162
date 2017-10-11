@@ -10,7 +10,7 @@ bool checkWin(int board[3][3], int player);
 void printBoard(int board[3][3], int X_MOVE, int O_MOVE);
 bool checkTie(int board[3][3]);
 void gameFinish(int board[3][3], int xWins, int oWins);
-
+//Thanks to Connor for letting me look at his java TTT program from last year
 int main(){
   //initialize variables
   int board[3][3];
