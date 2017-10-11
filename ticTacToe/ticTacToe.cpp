@@ -28,7 +28,7 @@ int main(){
     //set everything blank
     for(int r = 0; r<3; r++){
       for(int c = 0; c<3; c++){
-	board[r][c] = 0;
+	    board[r][c] = 0;
       }
     }
     while(!checkWin(board, X_MOVE) && !checkWin(board, O_MOVE) && !checkTie(board)){
@@ -40,15 +40,15 @@ int main(){
       int row = input[0]-'a';
       int column =input[1]-'1';
       if(board[row][column] == BLANK){
-	if(turn == X_TURN){
-	  board[row][column] = X_MOVE;
-	  turn = O_TURN;
-	}else{
-	  board[row][column] = O_MOVE;
-	  turn = X_TURN;	
-	}
+    	if(turn == X_TURN){
+    	  board[row][column] = X_MOVE;
+    	  turn = O_TURN;
+    	}else{
+    	  board[row][column] = O_MOVE;
+    	  turn = X_TURN;	
+    	}
       }else{
-	cout << "There is already a piece there. Choose another spot: ";
+	    cout << "There is already a piece there. Choose another spot: " << endl;
       }
     }
     printBoard(board, X_MOVE, O_MOVE);
@@ -79,23 +79,24 @@ int main(){
 bool checkWin(int board[3][3], int player){
   //checks rows for win
   for(int row = 0; row<3; row++){
-    if(board[row][0] == player && board[row][1]==player &&board[row][2] == player){
-      cout << "column";
+    if((board[row][0] == player) && (board[row][1]==player) &&(board[row][2] == player)){
       return true;
     }
   }
   //checks columns for win
   for(int column=0;column<3;column++){
-    if(board[0][column] == player && board[1][column] == player && board[2][column] == player){
-      cout << "column";
+    if((board[0][column] == player) && (board[1][column] == player) && (board[2][column] == player)){
       return true;
     }
   }
   //checks diagonals for win
-  if(board[0][0] == player && board [1][1] == player && board[2][2] == player)
+  if(board[0][0] == player && board [1][1] == player && board[2][2] == player){
     return true;
-  if(board[2][0]==player && board[1][1] == player && board[0][2] == player)
+  }
+  if(board[2][0]==player && board[1][1] == player && board[0][2] == player){
     return true;
+  }   
+    return false;
 }
 
 void printBoard(int board[3][3],int X_MOVE,int O_MOVE){
@@ -136,4 +137,3 @@ void gameFinish(int board[3][3], int xWins, int oWins){
     }
   }
 }
-  
