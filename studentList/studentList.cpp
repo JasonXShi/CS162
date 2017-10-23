@@ -39,11 +39,12 @@ int main(){
       print(v);
     }else if(strcmp(input, "DELETE")==0){
       cout << "Enter the Student ID to be deleted:" << endl;
-      deleteStudent(v, studentID);
+      cin >> studentID; 
+	deleteStudent(v, studentID);
     }else if(strcmp(input, "QUIT") ==0){
       break;
     }else{
-      cout << "Not a valid option. Re-enter your command:";
+      cout << "Not a valid option. ";
     }
   }
 }
@@ -67,7 +68,9 @@ void print(vector<Student*> &v){
 }
 void deleteStudent(vector<Student*> &v, int studentID){
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++){
-    if((*it)->studentID == studentID)
-      v.erase(it);
+    if((*it)->studentID == studentID){
+      delete(*it);
+	 v.erase((*it));
+    }
   }
 }
