@@ -1,6 +1,8 @@
-
-
-
+/*
+Jason Shi
+This program allows you to add and delete
+10/24/17
+*/
 #include <iostream>
 #include <vector>
 #include <cstring>
