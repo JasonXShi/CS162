@@ -76,11 +76,13 @@ Student* addStudent(char firstName[40], char lastName[40], int studentID, float 
 void print(vector<Student*> &v){
   //print 2 decimal places for floats
   cout.setf(ios::fixed);
+  //from stackoverflow - https://goo.gl/FihDAj
   cout.precision(2);
   //print everything in the vector
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++)
     cout << (*it)->firstName << " " << (*it)->lastName << ", " << (*it)->studentID << ", " << (*it)->gpa << endl;
 }
+//thx kevin for helping me
 void deleteStudent(vector<Student*> &v, int studentID){
   //iterate through the vector
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++){
