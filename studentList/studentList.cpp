@@ -80,6 +80,7 @@ void print(vector<Student*> &v){
   cout.precision(2);
   //print everything in the vector
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++)
+    //iterator from https://stackoverflow.com/questions/2395275/how-to-navigate-through-a-vector-using-iterators-c
     cout << (*it)->firstName << " " << (*it)->lastName << ", " << (*it)->studentID << ", " << (*it)->gpa << endl;
 }
 //thx kevin for helping me
