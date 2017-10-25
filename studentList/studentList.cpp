@@ -1,7 +1,11 @@
+
+
+
 #include <iostream>
 #include <vector>
 #include <cstring>
 #include <iterator>
+#include <iomanip>
 using namespace std;
 
 struct Student{
@@ -59,18 +63,22 @@ Student* addStudent(char firstName[40], char lastName[40], int studentID, float 
 }
 
 void print(vector<Student*> &v){
+   cout.setf(ios::fixed);
+   cout.precision(2);
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++){
     cout << (*it)->firstName << endl;
     cout << (*it)->lastName << endl;
     cout << (*it)->studentID << endl;
     cout << (*it)->gpa<<endl;
+	cout << " " << endl;
   }
 }
 void deleteStudent(vector<Student*> &v, int studentID){
   for(vector<Student*>::iterator it = v.begin(); it != v.end(); it++){
     if((*it)->studentID == studentID){
-      delete(*it);
-	 v.erase((*it));
+     v.erase((it));
+     break;
     }
   }
 }
+
