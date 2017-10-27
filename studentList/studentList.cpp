@@ -25,6 +25,10 @@ void deleteStudent(vector<Student*> &v, int studentID);
 int main(){
   //make vector of students
   vector<Student*> v;
+  cout << "Enter 'ADD' to add a student" << endl;
+  cout << "Enter 'DELETE' to delete a student" << endl;
+  cout << "Enter 'PRINT' to print all the students" << endl;
+  cout << "Enter 'QUIT' to exit the program" << endl;
   while(true){
     char input[6];
     char firstName[40];
@@ -32,7 +36,7 @@ int main(){
     int studentID;
     float gpa;
     //get input for commands 
-    cout << "Enter a command"<<endl;
+    cout << "Enter a command: "<<endl;
     cin >> input;
     if(strcmp(input, "ADD") == 0){
       //enter a new student's information if they input ADD
