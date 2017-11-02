@@ -13,6 +13,6 @@ class videogame:public digitalMedia{
  private:
   char* publisher;
   float rating;
-}
+};
 
 #endif
