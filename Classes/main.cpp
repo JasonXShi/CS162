@@ -1,10 +1,12 @@
 #include "digitalMedia.h"
+#include "videogame.h"
+#include "movie.h"
+#include "music.h"
 #include <iostream>
 #include <cstring>
 #include <vector>
 #include <iterator>
 using namespace std;
-
 
 int main(){
   vector<digitalMedia*> v;
@@ -35,7 +37,8 @@ int main(){
 	cin >> publisher;
 	cout << "Enter the Rating: " << endl;
 	cin >> rating;
-	v.push_back(addVideogame(title, year, publisher, rating));
+  digitalMedia* temp = new videogame(title, year, publisher, rating);
+	v.push_back(temp);
       }else if(strcmp(mediaType, "MOVIE") == 0){
 	char director[50];
 	int duration;
@@ -45,11 +48,12 @@ int main(){
 	cout << "Enter the Duration of the Movie in Minutes: "<< endl;
 	cin >> duration;
 	cout << "Enter the Rating of the Movie (1-5 Stars): " <<endl;
-	cint >> rating;
-	v.push_back(addMovie(title, director, year, duration, rating));
+	cin >> rating;
+  //videogame* temp = new videogame(title, year, publisher, rating);
+  //v.push_back(temp);
       }else if(strcmp(mediaType, "MUSIC") == 0){
 	char artist[50];
-	int duration[50];
+	int duration;
 	char publisher[50];
 	cout << "Enter the name of the Artist: " <<endl;
 	cin >> artist;
@@ -57,16 +61,16 @@ int main(){
 	cin >> duration;
 	cout << "Enter the Publisher: " << endl;
 	cin >> publisher;
-	v.push_back(addMusic(title, artist, year, duration, publisher));
+  //music* temp = new videogame(title, year, publisher, rating);
+  //v.push_back(temp);
       }else{
 	cout << "Invalid media type.." <<endl;
       }
     }else if(strcmp(input, "SEARCH") == 0){
-    
-    }else if(strcmp(input, "DELETE")==0){
-      //enter a student ID and delete that student
       cout << "Search by Title or Year? (TITLE, YEAR): " << endl;
-      
+
+    }else if(strcmp(input, "DELETE")==0){
+
     }else if(strcmp(input, "QUIT") ==0){
       //end on quit
       break;
@@ -75,4 +79,3 @@ int main(){
     }
   }
 }
-

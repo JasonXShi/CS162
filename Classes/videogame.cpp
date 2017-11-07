@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cstring>
-#include "digitalMedia.h"
+#include "game.h"
 
 using namespace std;
 
-videogame::videogame(char* newPublisher, float newRating): digitalMedia(newTitle, newYear){
+videogame::videogame(char[] newTitle, int newYear, char[] newPublisher, float newRating) : digitalMedia(newTitle, newYear){
   publisher = newPublisher;
   rating = newRating;
 }

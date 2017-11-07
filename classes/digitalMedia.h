@@ -7,12 +7,13 @@ using namespace std;
 
 class digitalMedia{
 public:
-  digitalMedia(char* newTitle, int newYear);
+  digitalMedia(char newTitle[], int newYear);
+  digitalMedia();
   char* getTitle();
   int getYear();
 private:
   char* title;
   int year;
-}
+};
 
 #endif

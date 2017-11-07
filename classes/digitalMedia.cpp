@@ -4,7 +4,8 @@
 
 using namespace std;
 
-digitalMedia::digitalMedia(char* newTitle, int newYear){
+digitalMedia::digitalMedia(char[] newTitle, int newYear){
+
   title = newTitle;
   year = newYear;
 }

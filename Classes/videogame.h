@@ -5,9 +5,9 @@
 #include <cstring>
 using namespace std;
 
-class videogame:public digitalMedia{
+class VideoGame:public digitalMedia{
  public:
-  videogame(char*, float);
+  videogame(char[] newTitle,int newYear, char[] newPublisher, float newRating);
   char* getPublisher();
   float getRating();
  private:
