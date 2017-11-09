@@ -18,3 +18,10 @@ char* Music::getPublisher(){
 int Music::getDuration(){
   return duration;
 }
+int Music::getType(){
+  return 1;
+}
+Music::~Music(){
+  delete[] publisher;
+  delete[] artist;
+}

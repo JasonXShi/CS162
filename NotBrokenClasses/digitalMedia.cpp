@@ -13,3 +13,9 @@ char* DigitalMedia::getTitle(){
 int DigitalMedia::getYear(){
   return year;
 }
+int DigitalMedia::getType(){
+  return 4;
+}
+DigitalMedia::~DigitalMedia(){
+  delete []title;
+}

@@ -3,13 +3,15 @@
 #include <cstring>
 
 class DigitalMedia{
-	public:
-	  DigitalMedia(char* newTitle, int newYear);
-	  char* getTitle();
-	  int getYear();
-	private:
-	  char* title;
-	  int year;
+ public:
+  DigitalMedia(char* newTitle, int newYear);
+  char* getTitle();
+  int getYear();
+  virtual int getType();
+  virtual ~DigitalMedia();
+ private:
+  char* title;
+  int year;
 };
 
 #endif

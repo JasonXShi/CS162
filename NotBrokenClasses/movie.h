@@ -9,6 +9,8 @@ class Movie:public DigitalMedia{
   int getDuration();
   char* getDirector();
   float getRating();
+  int getType();
+  ~Movie();
  private:
   char* director;
   int duration;

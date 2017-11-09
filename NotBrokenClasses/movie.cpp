@@ -14,9 +14,15 @@ char* Movie::getDirector(){
 }
 
 int Movie::getDuration(){
-	return duration;
+  return duration;
 }
 
 float Movie::getRating(){
   return rating;
+}
+int Movie::getType(){
+  return 2;
+}
+Movie::~Movie(){
+  delete[] director;
 }

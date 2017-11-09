@@ -5,14 +5,16 @@
 
 class Music:public DigitalMedia{
  public:
-	  Music(char* newTitle, int newYear, char* newArtist, char* newPublisher, int newDuration);
-	  char* getArtist();
-	  char* getPublisher();
-	  int getDuration();
-  private:
-	   char* artist;
-	   char* publisher ;
-	  int duration;
+  Music(char* newTitle, int newYear, char* newArtist, char* newPublisher, int newDuration);
+  char* getArtist();
+  char* getPublisher();
+  int getDuration();
+  int getType();
+  ~Music();
+ private:
+  char* artist;
+  char* publisher ;
+  int duration;
 };
 
 #endif
