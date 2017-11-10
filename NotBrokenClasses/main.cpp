@@ -95,9 +95,17 @@ int main(){
 	      cout << "Publisher: "<<((VideoGame*)(*it))->getPublisher()<<endl;
 	      cout << "Rating: " << ((VideoGame*)(*it))->getRating()<<endl;
 	    }else if((*it)->getType()==1){
-	      cout <<"music";
+				cout << "Title:" << searchTitle<< endl;
+	      cout << "Year: "<< (*it)->getYear()<<endl;
+				cout << "Artist: " << ((Music*)(*it))->getArtist()<<endl;
+				cout << "Publisher: "<<((Music*)(*it))->getPublisher()<<endl;
+				cout << "Duration: " << ((Music*)(*it))->getDuration()<<endl;
 	    }else if((*it)->getType()==2){
-	      cout <<"movie";
+				cout << "Title:" << searchTitle<< endl;
+				cout << "Year: "<< (*it)->getYear()<<endl;
+				cout << "Director: " << ((Movie*)(*it))->getDirector()<<endl;
+				cout << "Duration: " << ((Movie*)(*it))->getDuration()<<endl;
+				cout << "Rating: " << ((Movie*)(*it))->getRating()<<endl;
 	    }
 	    count++;
 	  }
@@ -113,7 +121,27 @@ int main(){
 	//cin.getline(searchYear, 5);
 	for(it = medias.begin(); it != medias.end(); it++) {
 	  if ((*it)->getYear()==searchYear) {
+			if((*it)->getType()==0){
+				cout << "Title:" << (*it)->getTitle()<< endl;
+				cout << "Year: "<<searchYear<<endl;
+				cout << "Publisher: "<<((VideoGame*)(*it))->getPublisher()<<endl;
+				cout << "Rating: " << ((VideoGame*)(*it))->getRating()<<endl;
+			}else if((*it)->getType()==1){
+				cout << "Title:" << (*it)->getTitle()<< endl;
+				cout << "Year: "<<searchYear<<endl;
+				cout << "Artist: " << ((Music*)(*it))->getArtist()<<endl;
+				cout << "Publisher: "<<((Music*)(*it))->getPublisher()<<endl;
+				cout << "Duration: " << ((Music*)(*it))->getDuration()<<endl;
+			}else if((*it)->getType()==2){
+				cout << "Title:" << (*it)->getTitle()<< endl;
+				cout << "Year: "<<searchYear<<endl;
+				cout << "Director: " << ((Movie*)(*it))->getDirector()<<endl;
+				cout << "Duration: " << ((Movie*)(*it))->getDuration()<<endl;
+				cout << "Rating: " << ((Movie*)(*it))->getRating()<<endl;
+			}
+
 	    count++;
+
 	  }
 	}
 	//printf("Found total %d Digital Medias with YEAR %s. \n", count, searchYear);
@@ -122,7 +150,7 @@ int main(){
 	cout << "Invalid Search Field" << endl;
 	break;
       }
-      
+
     } else if(strcmp(input, "DELETE")==0){
       cout << "Delete by Title or Year? (TITLE, YEAR): " << endl;
       char deleteField[6];
